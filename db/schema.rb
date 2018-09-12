@@ -10,15 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_195608) do
+ActiveRecord::Schema.define(version: 2018_09_12_223426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "armor", force: :cascade do |t|
+  create_table "armors", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "defense"
   end
 
   create_table "consumables", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "power"
   end
 
   create_table "enemies", force: :cascade do |t|
@@ -36,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_09_12_195608) do
     t.integer "weapon_id"
     t.integer "spell_id"
     t.integer "armor_id"
-    t.integer "loaction_id"
+    t.integer "location_id"
   end
 
   create_table "game_sessions", force: :cascade do |t|
@@ -45,13 +51,13 @@ ActiveRecord::Schema.define(version: 2018_09_12_195608) do
     t.integer "location_id"
   end
 
-  create_table "item_attributes", force: :cascade do |t|
-    t.string "name"
-    t.integer "power"
-    t.string "type"
-    t.string "item_type"
-    t.bigint "item_id"
-    t.index ["item_type", "item_id"], name: "index_item_attributes_on_item_type_and_item_id"
+  create_table "inventories", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "amount"
+    t.integer "armor_id"
+    t.integer "weapon_id"
+    t.integer "spell_id"
+    t.integer "consumable_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -79,6 +85,9 @@ ActiveRecord::Schema.define(version: 2018_09_12_195608) do
   end
 
   create_table "spells", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "power"
   end
 
   create_table "users", force: :cascade do |t|
@@ -94,6 +103,9 @@ ActiveRecord::Schema.define(version: 2018_09_12_195608) do
   end
 
   create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "attack"
   end
 
 end

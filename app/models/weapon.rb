@@ -1,4 +1,4 @@
 class Weapon < ApplicationRecord
-  has_many :item_attributes, as: :item
-  belongs_to :inventory
+  has_many :inventories
+  has_many :enemies
 end
