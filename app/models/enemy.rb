@@ -1,0 +1,3 @@
+class Enemy < Player
+  
+end

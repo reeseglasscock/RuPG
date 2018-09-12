@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_184200) do
+ActiveRecord::Schema.define(version: 2018_09_12_195608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "armor", force: :cascade do |t|
+  end
+
+  create_table "consumables", force: :cascade do |t|
+  end
 
   create_table "enemies", force: :cascade do |t|
     t.string "name"
@@ -31,6 +37,12 @@ ActiveRecord::Schema.define(version: 2018_09_12_184200) do
     t.integer "spell_id"
     t.integer "armor_id"
     t.integer "loaction_id"
+  end
+
+  create_table "game_sessions", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "user_id"
+    t.integer "location_id"
   end
 
   create_table "item_attributes", force: :cascade do |t|
@@ -66,6 +78,9 @@ ActiveRecord::Schema.define(version: 2018_09_12_184200) do
     t.string "sprite"
   end
 
+  create_table "spells", force: :cascade do |t|
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -76,6 +91,9 @@ ActiveRecord::Schema.define(version: 2018_09_12_184200) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "weapons", force: :cascade do |t|
   end
 
 end
