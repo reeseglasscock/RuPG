@@ -7,19 +7,19 @@
 </div>
 <div class="form-group">
   <%= f.label :armor_id, "Armor" %>
-  <%= f.text_field :armor_id, class: 'form-control' %>
+  <%= f.collection_select :armor_id, Armor.order(:name), :id, :name %>
 </div>
 <div class="form-group">
   <%= f.label :weapon_id, "Weapon" %>
-  <%= f.text_field :weapon_id, class: 'form-control' %>
+  <%= f.collection_select :weapon_id, Weapon.order(:name), :id, :name %>
 </div>
 <div class="form-group">
   <%= f.label :spell_id, "Spell" %>
-  <%= f.text_field :spell_id, class: 'form-control' %>
+  <%= f.collection_select :spell_id, Spell.order(:name), :id, :name %>
 </div>
 <div class="form-group">
   <%= f.label :consumable_id, "Consumable" %>
-  <%= f.text_field :consumable_id, class: 'form-control' %>
+  <%= f.collection_select :consumable_id, Consumable.order(:name), :id, :name %>
 </div>
 
 <%= f.hidden_field :user_id, value: session[:user_id] %>
