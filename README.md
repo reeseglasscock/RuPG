@@ -13,9 +13,12 @@ Things you may want to cover:
 
 * Database creation
 
-  rails db:reset db:seed
+  `rails db:create db:migrate db:seed`
 
 * Database initialization
+
+  If you need to seed your database over again run the following command:
+  `rails db:reset db:seed`
 
 * How to run the test suite
 
