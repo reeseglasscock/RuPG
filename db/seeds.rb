@@ -48,10 +48,6 @@ spells.each_with_index do |spell, index|
                power: index)
 end
 
-GameSession.create(user_id: 1,
-                   player_id: 1,
-                   location_id: 1)
-
 1.times do
   User.create(email: Faker::Internet.unique.free_email,
                password: 'password')
@@ -64,5 +60,9 @@ end
 
 
 10.times do |i|
-  Player.create(name: "sean",health: 100,stamina: 100,shade: 100,strength: Random.rand(2..10),endurance: Random.rand(2..10),constitution: Random.rand(2..10),intelligence: Random.rand(2..10),level: 1,exp: 0,sprite: "characters/character_#{i}")
+  Player.create(name: Faker::RuPaul.unique.queen,health: 100,stamina: 100,shade: 100,strength: Random.rand(2..10),endurance: Random.rand(2..10),constitution: Random.rand(2..10),intelligence: Random.rand(2..10),level: 1,exp: 0,sprite: "characters/character_#{i}")
 end
+
+GameSession.create(user_id: 1,
+                   player_id: 1,
+                   location_id: 1)
