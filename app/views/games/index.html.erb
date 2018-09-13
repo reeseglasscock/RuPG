@@ -1,7 +1,5 @@
-<div class="container">
-  <div class="logo">
-    <%= image_tag('characters/logo.png', :alt => "RuPG logo") %>
-  </div>
+<div class="splash_container">
+    <%= image_tag 'characters/logo.png', :alt => "RuPG logo", class: "logo_image" %>
   <div class="container start_buttons">
     <% if user_signed_in? == false %>
       <p>Please create an account or login to start.</p>
