@@ -1,1 +1,29 @@
 <h1>Choose Your Inventory</h1>
+
+<%= form_for @inventory, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<div class="form-group">
+  <%= f.label :amount, "Amount" %>
+  <%= f.number_field :amount, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :armor_id, "Armor" %>
+  <%= f.text_field :armor_id, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :weapon_id, "Weapon" %>
+  <%= f.text_field :weapon_id, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :spell_id, "Spell" %>
+  <%= f.text_field :spell_id, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :consumable_id, "Consumable" %>
+  <%= f.text_field :consumable_id, class: 'form-control' %>
+</div>
+
+<%= f.hidden_field :user_id, value: session[:user_id] %>
+<%= f.hidden_field :player_id, value: params[:player_id] %>
+
+<%= f.submit class: 'btn btn-success' %>
+<% end %>

@@ -1,6 +1,6 @@
 class InventoriesController < ApplicationController
   def index
-    @inventory = Inventory.all
+    @inventories = Inventory.all
   end
 
   def new
@@ -8,13 +8,14 @@ class InventoriesController < ApplicationController
   end
 
   def create
+    @player = Player.find(params[:player_id])
     @inventory = Inventory.new(inventory_params)
     if @inventory.save
       flash[:alert] = "Inventory successfully created."
       redirect_to games_path
     else
       flash[:alert] = "Inventory not created, please check your submission."
-      redirect_to games_path
+      redirect_to new_player_inventory_path(@player)
     end
   end
 
