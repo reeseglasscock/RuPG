@@ -1,14 +1,13 @@
-<div class="container">
-  <div class="logo">
-    <%= image_tag('characters/logo.png', :alt => "RuPG logo") %>
-    <p>A RuPG</p>
-  </div>
-  <div class="">
+<div class="splash_container">
+    <%= image_tag 'characters/logo.png', :alt => "RuPG logo", class: "logo_image" %>
+  <div class="container start_buttons">
     <% if user_signed_in? == false %>
+      <p>Please create an account or login to start.</p>
       <span><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %></span>
       <span><%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %></span>
     <% else %>
       <span><%= link_to "Log Out", destroy_user_session_path, :data => {:method => 'delete'}, class: "btn btn-danger" %></span>
+      <span><%= link_to "Start Game", players_path, class: "btn btn-success"%></span>
     <% end %>
   </div>
 </div>

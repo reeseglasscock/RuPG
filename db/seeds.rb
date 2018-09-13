@@ -60,7 +60,7 @@ end
 
 
 10.times do |i|
-  Player.create(name: Faker::RuPaul.unique.queen,health: 100,stamina: 100,shade: 100,strength: Random.rand(2..10),endurance: Random.rand(2..10),constitution: Random.rand(2..10),intelligence: Random.rand(2..10),level: 1,exp: 0,sprite: "characters/character_#{i}")
+  Player.create(name: Faker::RuPaul.unique.queen,health: 100,stamina: 100,shade: 100,strength: Random.rand(2..10),endurance: Random.rand(2..10),constitution: Random.rand(2..10),intelligence: Random.rand(2..10),level: 1,exp: 0,sprite: "characters/character_#{i + 1}")
 end
 
 GameSession.create(user_id: 1,
