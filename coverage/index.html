@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-12T15:35:10-07:00">2018-09-12T15:35:10-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-12T15:42:16-07:00">2018-09-12T15:42:16-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.71%</span></span>
+    (<span class="covered_percent"><span class="green">98.78%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.1
+         1.12
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>40</b> files in total.
-    <b>155</b> relevant lines. 
-    <span class="green"><b>153</b> lines covered</span> and
+    <b>42</b> files in total.
+    <b>164</b> relevant lines. 
+    <span class="green"><b>162</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -204,8 +204,8 @@
         <td class="strong"><a href="#c6cd225f7fd1d88d66daafb1961d1f5dae8aba98" class="src_link" title="app/models/spell.rb">app/models/spell.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
-        <td>1</td>
-        <td>1</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -411,6 +411,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#7b2a67a67c6535cc38ed968f389b6e0ca3397b89" class="src_link" title="spec/models/game_session_spec.rb">spec/models/game_session_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.6</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#13c9ab0229aec8766f074b53291e6fea77777217" class="src_link" title="spec/models/inventory_spec.rb">spec/models/inventory_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>9</td>
@@ -428,6 +438,16 @@
         <td>7</td>
         <td>0</td>
         <td>1.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#2dba1924656bd46544e3fbef190dfe8a93118f89" class="src_link" title="spec/models/spells_spec.rb">spec/models/spells_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -926,19 +946,19 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :users</code>
+          <code class="ruby">  belongs_to :user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :players</code>
+          <code class="ruby">  belongs_to :player</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :locations</code>
+          <code class="ruby">  belongs_to :location</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1134,8 +1154,8 @@
     <h3>app/models/spell.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1149,10 +1169,10 @@
           <code class="ruby">class Spell &lt; ApplicationRecord</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  has_many :inventories</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -4630,6 +4650,67 @@
 </div>
 
       
+        <div class="source_table" id="7b2a67a67c6535cc38ed968f389b6e0ca3397b89">
+  <div class="header">
+    <h3>spec/models/game_session_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe GameSession do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should belong_to :user }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should belong_to :player }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should belong_to :location }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="13c9ab0229aec8766f074b53291e6fea77777217">
   <div class="header">
     <h3>spec/models/inventory_spec.rb</h3>
@@ -4766,6 +4847,55 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="2dba1924656bd46544e3fbef190dfe8a93118f89">
+  <div class="header">
+    <h3>spec/models/spells_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Spell do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should have_many :inventories }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>

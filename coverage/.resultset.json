@@ -697,7 +697,7 @@
       ],
       "/Users/Guest/Desktop/RuPg/app/models/spell.rb": [
         1,
-        null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/RuPg/app/models/weapon.rb": [
@@ -718,6 +718,15 @@
         null,
         1,
         2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/RuPg/spec/models/game_session_spec.rb": [
+        1,
+        null,
+        1,
         2,
         2,
         2,
@@ -745,6 +754,13 @@
         2,
         null
       ],
+      "/Users/Guest/Desktop/RuPg/spec/models/spells_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/RuPg/spec/models/weapon_spec.rb": [
         1,
         null,
@@ -753,6 +769,6 @@
         null
       ]
     },
-    "timestamp": 1536791710
+    "timestamp": 1536792136
   }
 }

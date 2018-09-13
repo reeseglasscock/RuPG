@@ -1,5 +1,5 @@
 class GameSession < ApplicationRecord
-  has_many :users
-  has_many :players
-  has_many :locations
+  belongs_to :user
+  belongs_to :player
+  belongs_to :location
 end

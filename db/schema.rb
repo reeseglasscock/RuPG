@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_223426) do
+ActiveRecord::Schema.define(version: 2018_09_12_234056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "armor_type"
     t.integer "defense"
   end
 
   create_table "consumables", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "consumable_type"
     t.integer "power"
   end
 
@@ -65,11 +65,6 @@ ActiveRecord::Schema.define(version: 2018_09_12_223426) do
     t.string "image"
   end
 
-  create_table "loot_drops", force: :cascade do |t|
-    t.integer "location_id"
-    t.integer "item_id"
-  end
-
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "health"
@@ -86,7 +81,7 @@ ActiveRecord::Schema.define(version: 2018_09_12_223426) do
 
   create_table "spells", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "spell_type"
     t.integer "power"
   end
 
@@ -104,7 +99,7 @@ ActiveRecord::Schema.define(version: 2018_09_12_223426) do
 
   create_table "weapons", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "weapon_type"
     t.integer "attack"
   end
 
