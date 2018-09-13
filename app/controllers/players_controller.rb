@@ -8,10 +8,10 @@ class PlayersController < ApplicationController
   end
 
   def create
-    @player = Player.new(post_params)
+    @player = Player.new(player_params)
     if @player.save
       flash[:alert] = "Player successfully created."
-      redirect_to post_path(@player)
+      redirect_to players_path
     else
       flash[:alert] = "Player not created, please check your submission."
       redirect_to '/players/new'
