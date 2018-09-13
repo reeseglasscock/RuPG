@@ -1,0 +1,26 @@
+<%= form_for @player do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :strength, "Strength" %>
+    <%= f.number_field :strength, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :endurance, "Endurance" %>
+    <%= f.number_field :endurance, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :constitution, "Constitution" %>
+    <%= f.number_field :constitution, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :intelligence, "Intelligence" %>
+    <%= f.number_field :intelligence, class: 'form-control' %>
+  </div>
+
+  <%= f.hidden_field :user_id, value: session[:user_id] %>
+
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>
