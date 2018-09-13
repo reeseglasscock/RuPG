@@ -1,4 +1,6 @@
 class InventoriesController < ApplicationController
+  before_action :check_for_inventory, only: [:new, :create]
+
   def index
     @inventories = Inventory.all
   end
@@ -17,6 +19,11 @@ class InventoriesController < ApplicationController
       flash[:alert] = "Inventory not created, please check your submission."
       redirect_to new_player_inventory_path(@player)
     end
+  end
+
+  def check_for_inventory
+    byebug
+    @inventory = Inventory.find(params[:player_id])
   end
 
   private
