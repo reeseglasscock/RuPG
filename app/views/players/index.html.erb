@@ -1,17 +1,21 @@
-<% @players.each do |player| %>
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <%= image_tag "#{player.sprite}.png", :alt => "RuPG logo" %>
-      <div class="caption">
-        <p><%= player.name %></p>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+<h2 class="select_character_header">Select A Character</h2>
+<div class="container-fluid">
+  <div class="row">
+  <% @players.each do |player| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "#{player.sprite}.png", :alt => "RuPG logo" %>
+        <div class="caption">
+          <p><%= player.name %></p>
+          <p>...</p>
+          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </div>
       </div>
     </div>
+
+  <% end %>
   </div>
 </div>
 
-<% end %>
 
 <span><%= link_to "Create New Player", new_player_path, class: "btn btn-primary" %></span>
