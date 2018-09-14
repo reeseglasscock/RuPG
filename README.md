@@ -27,3 +27,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Font for body @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
