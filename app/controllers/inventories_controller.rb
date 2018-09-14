@@ -22,7 +22,7 @@ class InventoriesController < ApplicationController
   end
 
   def check_for_inventory
-    byebug
+    binding.pry
     @inventory = Inventory.find(params[:player_id])
   end
 
